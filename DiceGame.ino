@@ -1,47 +1,63 @@
 int randNum;
 void setup(){
   pinMode(2, OUTPUT);
-  pinMod(3, OUTPUT);
+  pinMode(3, INPUT);
   pinMode(4, OUTPUT);
   pinMode(5, OUTPUT);
   pinMode(6, OUTPUT);
-  pinMode(7, INPUT);
-  randomSeed(analogRead(0));
+  pinMode(7, OUTPUT);
+  pinMode(8, OUTPUT);
+  pinMode(9, OUTPUT);
 }
 void loop(){
-  if(digitalRead(7)){
-    randNum = random(1,5);
+  if(digitalRead(3)){
+    randNum = random(1,7);
     if(randNum == 1){
       digitalWrite(2, HIGH);
-      delay(200);
+      delay(1000);
       digitalWrite(2, LOW);
     }
     if(randNum == 2){
-      digitalWrite(3, HIGH);
-      delay(200);
-      digitalWrite(3, LOW);
+      digitalWrite(4, HIGH);
+      digitalWrite(2, HIGH);
+      delay(1000);
+      digitalWrite(2, LOW);
+      digitalWrite(4, LOW);
     }
     if(randNum == 3){
+      Serial.println("You Win!");
+      digitalWrite(2, HIGH);
       digitalWrite(4, HIGH);
-      delay(200);
+      digitalWrite(5, HIGH);
+      digitalWtite(6, HIGH);
+      digitalWrite(7, HIGH);
+      digitalWrite(8, HIGH);
+      digitalWrite(9, HIGH);
+      delay(1000);
+      digitalWrite(9, LOW);
+      digitalWrite(8, LOW);
+      digitalWrite(7, LOW);
+      digitalWrite(6, LOW);
+      digitalWrite(5, LOW);
       digitalWrite(4, LOW);
-  }
-  if(randNum == 4){
-    digitalWrite(5, HIGH);
-    delay(200);
-    digitalWrite(5,LOW);
-  }
-  if(randNum == 5){
-    digitalWrite(6, HIGH);
-    delay(200);
-    digitalWrite(6, LOW);
-   }
-  if(randNum == 6){
-    digitalWrite(2, HIGH);
-    digitalWrite(3, HIGH);
-    delay(200);
-    digitalWrite(3, LOW);
-    digitalWrite(2, LOW);
-  }
+      digitalWrite(2, LOW);
+    }
+    if(randNum == 4){
+      digitalWrite(2, HIGH);
+      digitalWrite(4, HIGH);
+      digitalWrite(5, HIGH);
+      digitalWrite(6, HIGH);
+      digitalWrite(7, HIGH);
+      digitalWtite(8, HIGH);
+      digitalWrite(9, HIGH);
+      delay(2000);
+      digitalWrite(8, LOW);
+      digitalWrite(7, LOW);
+      digitalWrite(6, LOW);
+      digitalWrite(5, LOW);
+      digitalWtite(4, LOW);
+      digitalWrite(2, LOW);
+    }
+    }
   }
 }
