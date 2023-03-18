@@ -36,5 +36,12 @@ void loop(){
     delay(200);
     digitalWrite(6, LOW);
    }
+  if(randNum == 6){
+    digitalWrite(2, HIGH);
+    digitalWrite(3, HIGH);
+    delay(200);
+    digitalWrite(3, LOW);
+    digitalWrite(2, LOW);
+  }
   }
 }
