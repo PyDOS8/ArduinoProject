@@ -24,7 +24,7 @@ void loop(){
     if(randNum == 3){
       digitalWrite(4, HIGH);
       delay(200);
-      digitalWrite(i, LOW);
+      digitalWrite(4, LOW);
   }
   if(randNum == 4){
     digitalWrite(5, HIGH);
