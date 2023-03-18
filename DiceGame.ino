@@ -41,6 +41,7 @@ void loop(){
       digitalWrite(2, LOW);
     }
     if(randNum == 4){
+      Serial.println("You Lose!");
       digitalWrite(2, HIGH);
       digitalWrite(4, HIGH);
       digitalWrite(5, HIGH);
@@ -56,7 +57,6 @@ void loop(){
       digitalWrite(5, LOW);
       digitalWtite(4, LOW);
       digitalWrite(2, LOW);
-    }
     }
   }
 }
