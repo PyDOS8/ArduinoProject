@@ -49,6 +49,7 @@ void loop(){
       digitalWtite(8, HIGH);
       digitalWrite(9, HIGH);
       delay(2000);
+      digitalWrite(9, LOW);
       digitalWrite(8, LOW);
       digitalWrite(7, LOW);
       digitalWrite(6, LOW);
