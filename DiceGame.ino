@@ -1,6 +1,6 @@
 int randNum;
 void setup(){
-  pinMode(2, OUTPUT);
+  pinMode(2, OUTPUT);//this tells the arduino to set pin mode 2 to output which will allow us to turn it on, etc
   pinMode(3, INPUT);
   pinMode(4, OUTPUT);
   pinMode(5, OUTPUT);
