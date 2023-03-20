@@ -14,7 +14,7 @@ void setup(){
 }
 void loop(){
   if(digitalRead(3)){
-    randNum = random(1,20);
+    randNum = random(1,19);
     Serial.println(randNum);
     if(randNum == 1){
       digitalWrite(2, HIGH);
